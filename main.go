@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+
 	from, err := envy.MustGet("TWILIO_NUMBER")
 	if err != nil {
 		err = fmt.Errorf("failed to load TWILIO_NUMBER: %w", err)
@@ -50,5 +51,5 @@ func main() {
 		c.Status(http.StatusOK)
 	})
 
-	app.Listen(8080)
+	app.Listen(envy.Get("PORT", "8080"))
 }

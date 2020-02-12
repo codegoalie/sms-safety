@@ -13,3 +13,7 @@ There are several environment variables which need to be set to get the app to r
 `TWILIO_AUTH_TOKEN` - Your Auth Token from Twilio
 `RECEIVER_NUMBER` - Your real number to forward SMS messages to
 `TWILIO_NUMBER` - Your Twilio SMS number to send forwarded messages from. This is also the number to enter into 3rd party services
+
+Optional env vars:
+
+`PORT` - Port to listen on. Defaults to `:8080`
